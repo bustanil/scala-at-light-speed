@@ -9,7 +9,7 @@ object ObjectOrientation extends App {
     // define fields
     val age: Int = 0
     // define methods
-    def eat() = println("I'm eating")
+    def eat(): Unit = println("I'm eating")
   }
   val anAnimal = new Animal
 
@@ -100,22 +100,22 @@ object ObjectOrientation extends App {
   } finally {
     // execute some code no matter what
   }
-  
+
   // generics
   abstract class MyList[T] {
     def head: T
     def tail: MyList[T]
   }
-  
+
   // using a generic with a concrete type
   val aList: List[Int] = List(1, 2, 3) // List.apply(1, 2, 3)
   val first = aList.head
   val rest = aList.tail
-  
+
   val aStringList: List[String] = List("hello", "Scala")
   val firstString = aStringList.head
   val restString = aStringList.tail
-  
+
   // Point #1: in Scala we operate with IMMUTABLE values/objects
   // any modification to an object must return ANOTHER object
   /**
